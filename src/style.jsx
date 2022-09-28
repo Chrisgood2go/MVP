@@ -12,6 +12,16 @@ background: transparent;
   width: 100%
   height: 300px;
 `
+const LilCircle = styled.div`
+display: flex;
+justify-content: center;
+background: transparent;
+  border-radius: 50%;
+  border: solid;
+  border-color: #00CFFF;
+  width: 50px;
+  height: 50px;
+`
 const Heads = styled.div`
 background: transparent;
 margin: 25%;
@@ -25,6 +35,15 @@ text-shadow: 0 0 5px #FFB03A;
   border-color: #ffffff; */
   width: 150px;
   height: 150px;
+`
+const LilHT = styled.div`
+background: transparent;
+margin-top: 20%;
+text-align: center;
+font-family: Monaco;
+font-size: 150%;
+color: #FFB03A;
+text-shadow: 0 0 5px #FFB03A;
 `
 
 const Stakes = styled.label`
@@ -87,5 +106,14 @@ const Row = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+
 `
-export { Btn, CallSel, CallDiv, InputStake, Stakes, Heads, Circle, Column, Row }
+const Info = styled.div`
+color: #B3EFFF;
+/* margin-right: 50%; */
+padding-right: 30px;
+/* margin-left: 50%; */
+width: 150%;
+
+`
+export { Btn, CallSel, CallDiv, InputStake, Stakes, Heads, Circle, Column, Row, LilCircle, LilHT, Info}

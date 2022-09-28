@@ -7,7 +7,7 @@ let tossSchema = mongoose.Schema({
   identifier: String,
   date: Date,
   call: String,
-  landed: Boolean,
+  landed: String,
   stake: String,
   settled: Boolean
 });

@@ -7,11 +7,6 @@ body {
   justify-content: center;
 }
 
-/* .gradient-text {
-  background-image: linear-gradient(60deg, #00CFFF, #FFB03A);
-  background-clip: text;
-  color: transparent;
-} */
 
 h1 {
   -webkit-background-clip: text;
