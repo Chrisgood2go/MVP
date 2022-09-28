@@ -1,15 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { createRoot } from "react-dom/client";
 import Coin from './coin.jsx'
+import Tosses from './tosses.jsx'
+import axios from 'axios';
+import styled from 'styled-components';
+import {Row,Column} from './style.jsx'
+
+
+
 
 const App = () => {
+  const[tosses, setTosses]= useState('')
+  const [stakes, setStakes] =useState('');
+  const[call, setCall] =useState('HEADS');
+  const[result, setResult]=useState('');
+
+  React.useEffect(()=>{
+    axios.get(`http://localhost:3000/recentTosses/`)
+    .catch(err => {
+      console.log(err)
+    })
+    .then(response => {
+      setTosses(response.data)
+    })
+  },[])
+
 return (
   <div>
-    <h1 >Chance Toss</h1>
+      <Coin setStakes = {setStakes} setCall = {setCall} setResult = {setResult}></Coin>
+<Tosses></Tosses>
 
-    <p> SEE WHAT CHANCE WILL YIELD</p>
-    <Coin></Coin>
   </div>
+
+
   );
 }
 
