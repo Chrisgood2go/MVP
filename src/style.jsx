@@ -9,7 +9,7 @@ background: transparent;
   border-radius: 50%;
   border: solid;
   border-color: #00CFFF;
-  width: 100%
+  width: 300px;
   height: 300px;
 `
 const LilCircle = styled.div`
@@ -65,7 +65,7 @@ color: #ffffff;
   border: solid;
   border-width: thin;
   border-color: #B3EFFF;
-  width: 100%;
+  width: 300px;
   height: 75px;
   border-radius: 10%;
 `
@@ -97,23 +97,25 @@ border-radius: 10% / 95%;
 const Column = styled.div`
   display: flex;
   flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
-  width: 325px;
+  justify-content: center;
+  align-items: center;
+`
+const Align = styled.div`
+justify-content: center;
+align-items: center;
 `
 const Row = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+  justify-content: center;
+  align-items: center;
 
 `
 const Info = styled.div`
 color: #B3EFFF;
-/* margin-right: 50%; */
-padding-right: 30px;
-/* margin-left: 50%; */
+padding-right: 30px; */
 width: 150%;
-
 `
-export { Btn, CallSel, CallDiv, InputStake, Stakes, Heads, Circle, Column, Row, LilCircle, LilHT, Info}
+export { Btn, CallSel, CallDiv, InputStake, Stakes, Heads, Circle, Column, Row, LilCircle, LilHT, Info, Align}

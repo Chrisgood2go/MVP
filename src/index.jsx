@@ -4,7 +4,7 @@ import Coin from './coin.jsx'
 import Tosses from './tosses.jsx'
 import axios from 'axios';
 import styled from 'styled-components';
-import { Row, Column } from './style.jsx'
+import { Row, Column, Align} from './style.jsx'
 
 
 
@@ -70,7 +70,7 @@ const App = () => {
   const [stakes, setStakes] = useState('');
   const [call, setCall] = useState('HEADS');
   const [result, setResult] = useState('');
-
+  const [toggle, setToggle] = useState(0);
 
 
   React.useEffect(() => {
@@ -101,13 +101,13 @@ const App = () => {
           setTosses(response.data)
         })
     }
-  }, [result])
+  }, [toggle])
 
   return (
-    <div>
-      <Coin setStakes={setStakes} setCall={setCall} setResult={setResult}></Coin>
+    <Align>
+      <Coin setStakes={setStakes} setCall={setCall} setResult={setResult} toggle = {toggle} setToggle = {setToggle}></Coin>
       <Tosses tosses = {tosses} setTosses = {setTosses} ></Tosses>
-    </div>
+    </Align>
 
 
   );

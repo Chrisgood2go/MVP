@@ -5,6 +5,7 @@ body {
   border-color: #B3EFFF;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 

@@ -29,6 +29,7 @@ const Coin = (props) => {
       clearInterval(IntervalId)
       props.setResult(random % 2 === 0 ? 'HEADS' : 'TAILS');
       setSide(random % 2 === 0 ? 'HEADS' : 'TAILS')
+      props.setToggle(props.toggle === 0 ? 1 : 0)
     },1000)
   }
 
