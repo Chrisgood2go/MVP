@@ -43,7 +43,7 @@ const Coin = (props) => {
       </Circle>
       <br />
       <br />
-      < Stakes htmlFor="stakes"> STAKES </Stakes>
+      < Stakes htmlFor="stakes"> DEAL </Stakes>
       <InputStake id="stakes" name="stakes" maxlength="280" onChange={handleChange}/>
       <br />
       <br />

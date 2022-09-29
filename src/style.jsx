@@ -21,6 +21,7 @@ background: transparent;
   border-color: #00CFFF;
   width: 50px;
   height: 50px;
+  margin-bottom: 5px;
 `
 const Heads = styled.div`
 background: transparent;
@@ -114,8 +115,8 @@ const Row = styled.div`
 
 `
 const Info = styled.div`
-color: #B3EFFF;
-padding-right: 30px; */
+color: #FFFFFF;
+padding-right: 30px;
 width: 150%;
 `
 export { Btn, CallSel, CallDiv, InputStake, Stakes, Heads, Circle, Column, Row, LilCircle, LilHT, Info, Align}

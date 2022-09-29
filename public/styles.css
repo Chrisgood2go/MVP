@@ -28,6 +28,7 @@ p {
   text-align: center;
   text-shadow: 0 0 5px #00CFFF ;;
   font-weight: bold;
-  font-family: Georgia, 'Times New Roman', Times, serif
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 125%;
 }
 

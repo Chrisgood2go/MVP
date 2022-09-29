@@ -41,20 +41,22 @@ const Tosses = (props) => {
     <Row>
       <StatsHead>RECENT TOSSES</StatsHead>
       <Row>
+
         {props.tosses.map((toss, index) => {
           return (
+
             <span key={index}>
+              <br/>
               <span>
                 <LilCircle>
                   <LilHT>{toss.landed[0]}</LilHT>
                 </LilCircle>
               </span>
-              <br/>
               <span>
-                <Info>called:{toss.landed}</Info>
-                <Info>{toss.date}</Info>
-                <Info>stake:{toss.stake.length < 20 ? toss.stake :toss.stake.split('').slice(0,20).join('')+'...'}</Info>
-                <Info>settled:{toss.settled === false ? 'false' : 'true'}</Info>
+              <Info>{toss.date}</Info>
+                <Info>called: {toss.landed}</Info>
+                <Info>deal: {toss.stake.length < 20 ? toss.stake :toss.stake.split('').slice(0,20).join('')+'...'}</Info>
+                <Info>settled: {toss.settled === false ? 'false' : 'true'}</Info>
                 <br/>
                 <span><Btn onClick={() => { handleSettle(toss._id, toss.settled) }}>{toss.settled === false ? 'settle' : 'unsettle'}</Btn></span>
                 <span><Btn onClick={() => { handleDelete(toss._id) }}>delete</Btn></span>
